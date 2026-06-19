@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💖 Surprise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAGE 1: QUIZ -->
+<section id="page1" class="page active">
+  <h1>💖 Before You Enter 💖</h1>
+
+  <div id="quizBox">
+    <p id="question">What is my favorite color?</p>
+    <input id="answer" type="text" placeholder="Type your answer..."/>
+    <button onclick="nextQuestion()">Submit</button>
+  </div>
+</section>
+
+<!-- PAGE 2: GIFT -->
+<section id="page2" class="page hidden">
+  <h1>Someone has a surprise for you ❤️</h1>
+  <p>Tap the gift 🎁</p>
+
+  <div class="gift" onclick="openCard()">🎁</div>
+</section>
+
+<!-- PAGE 3: CARD -->
+<section id="page3" class="page hidden">
+  <h1>Happy Anniversary To Us ❤️</h1>
+  <p class="fade-in">A special message is loading...</p>
+
+  <button onclick="goToVoice()">Continue 🎵</button>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mp3">
+  </audio>
+</section>
+
+<!-- PAGE 4: VOICE NOTE -->
+<section id="page4" class="page hidden">
+  <h2>Listen to this 💌</h2>
+
+  <audio id="voiceNote" controls>
+    <source src="assets/voice.mp3" type="audio/mp3">
+  </audio>
+
+  <p id="subtitle">...</p>
+
+  <button id="continueBtn" class="hidden" onclick="goToLetter()">
+    Click Meee ❤️
+  </button>
+</section>
+
+<!-- PAGE 5: LETTER -->
+<section id="page5" class="page hidden">
+  <div class="letterBox">
+    <h2>💌 My Love</h2>
+    <p id="letter"></p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
