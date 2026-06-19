@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  text-align: center;
+  color: #fff;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  padding: 40px;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 70%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.gift {
+  font-size: 80px;
+  cursor: pointer;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.letterBox {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 20px;
+}
