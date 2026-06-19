@@ -36,11 +36,24 @@ function nextQuestion() {
     showPage(2);
   }
 }
-
 function showPage(num) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-  document.getElementById("page" + num).classList.add("active");
+  // hide all pages first
+  document.querySelectorAll(".page").forEach(p => {
+    p.classList.remove("active");
+  });
+
+  // show only target page
+  const target = document.getElementById("page" + num);
+
+  if (target) {
+    target.classList.add("active");
+  } else {
+    console.error("Page not found: page" + num);
+  }
 }
+window.onload = () => {
+  showPage(1);
+};
 
 function openCard() {
   showPage(3);
